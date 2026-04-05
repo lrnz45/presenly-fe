@@ -1,0 +1,169 @@
+[90m[[90mnuxt:tailwindcss[90m][39m [36mℹ[39m Using default Tailwind CSS file
+[Vue] Resolve plugin path failed: vue-router/volar/sfc-route-blocks Error: Cannot find module '@vue/language-core'
+Require stack:
+- C:\Projects\presenly-app\frontend\node_modules\vue-router\dist\volar\sfc-route-blocks.cjs
+- C:\Users\nunik\AppData\Local\npm-cache\_npx\cb6709e40eb1fb08\node_modules\@vue\language-core\lib\compilerOptions.js
+- C:\Users\nunik\AppData\Local\npm-cache\_npx\cb6709e40eb1fb08\node_modules\@vue\language-core\index.js
+- C:\Users\nunik\AppData\Local\npm-cache\_npx\cb6709e40eb1fb08\node_modules\vue-tsc\index.js
+- C:\Users\nunik\AppData\Local\npm-cache\_npx\cb6709e40eb1fb08\node_modules\vue-tsc\bin\vue-tsc.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+    at Function._load (node:internal/modules/cjs/loader:1211:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1487:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Projects\presenly-app\frontend\node_modules\vue-router\dist\volar\sfc-route-blocks.cjs:6:26)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Projects\\presenly-app\\frontend\\node_modules\\vue-router\\dist\\volar\\sfc-route-blocks.cjs',
+    'C:\\Users\\nunik\\AppData\\Local\\npm-cache\\_npx\\cb6709e40eb1fb08\\node_modules\\@vue\\language-core\\lib\\compilerOptions.js',
+    'C:\\Users\\nunik\\AppData\\Local\\npm-cache\\_npx\\cb6709e40eb1fb08\\node_modules\\@vue\\language-core\\index.js',
+    'C:\\Users\\nunik\\AppData\\Local\\npm-cache\\_npx\\cb6709e40eb1fb08\\node_modules\\vue-tsc\\index.js',
+    'C:\\Users\\nunik\\AppData\\Local\\npm-cache\\_npx\\cb6709e40eb1fb08\\node_modules\\vue-tsc\\bin\\vue-tsc.js'
+  ]
+}
+app/layouts/dashboard.vue(200,29): error TS2532: Object is possibly 'undefined'.
+app/layouts/dashboard.vue(200,29): error TS2532: Object is possibly 'undefined'.
+app/layouts/dashboard.vue(200,39): error TS2532: Object is possibly 'undefined'.
+app/layouts/dashboard.vue(200,39): error TS2532: Object is possibly 'undefined'.
+app/pages/dashboard/laporan.vue(272,37): error TS2322: Type 'string' is not assignable to type '"" | AttendanceDayCode'.
+app/pages/dashboard/laporan.vue(386,34): error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+app/pages/dashboard/laporan.vue(390,31): error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+app/pages/dashboard/laporan.vue(390,37): error TS18048: 'month' is possibly 'undefined'.
+app/pages/dashboard/laporan.vue(404,45): error TS2322: Type 'number | undefined' is not assignable to type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+app/pages/dashboard/laporan.vue(404,51): error TS2322: Type 'number | undefined' is not assignable to type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+app/pages/dashboard/laporan.vue(489,36): error TS18048: 'month' is possibly 'undefined'.
+app/pages/dashboard/laporan.vue(499,9): error TS2532: Object is possibly 'undefined'.
+app/pages/dashboard/laporan.vue(510,36): error TS18048: 'month' is possibly 'undefined'.
+app/pages/dashboard/laporan.vue(513,20): error TS2532: Object is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(279,5): error TS7034: Variable 'humanInstance' implicitly has type 'any' in some locations where its type cannot be determined.
+app/pages/dashboard/pegawai/[id]/enroll.vue(280,5): error TS7034: Variable 'detectInterval' implicitly has type 'any' in some locations where its type cannot be determined.
+app/pages/dashboard/pegawai/[id]/enroll.vue(281,5): error TS7034: Variable 'holdStart' implicitly has type 'any' in some locations where its type cannot be determined.
+app/pages/dashboard/pegawai/[id]/enroll.vue(282,5): error TS7034: Variable 'holdTimer' implicitly has type 'any' in some locations where its type cannot be determined.
+app/pages/dashboard/pegawai/[id]/enroll.vue(323,16): error TS7006: Parameter 'rad' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(327,20): error TS7006: Parameter 'yaw' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(327,25): error TS7006: Parameter 'pitch' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(327,32): error TS7006: Parameter 'smileScore' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(327,44): error TS7006: Parameter 'stepIdx' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(330,26): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(330,45): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(331,30): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(331,53): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(332,22): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(332,58): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(333,13): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(333,49): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(337,21): error TS7006: Parameter 'yaw' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(337,26): error TS7006: Parameter 'pitch' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(337,33): error TS7006: Parameter 'smileScore' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(337,45): error TS7006: Parameter 'stepIdx' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(342,19): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(342,42): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(344,20): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(344,44): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(346,23): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(346,42): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(348,17): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(348,43): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(350,19): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(350,46): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(352,16): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(352,51): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(354,18): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(354,53): error TS18048: 'r' is possibly 'undefined'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(396,9): error TS7005: Variable 'humanInstance' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(419,54): error TS18046: 'e' is of type 'unknown'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(428,82): error TS7005: Variable 'humanInstance' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(437,17): error TS2322: Type '{}' is not assignable to type '{ turnLeft: boolean; turnRight: boolean; chinUp: boolean; chinDown: boolean; lookStraight: boolean; smile: boolean; noSmile: boolean; } | { turnLeft: boolean; turnRight: boolean; chinUp: boolean; chinDown: boolean; lookStraight: boolean; smile: boolean; noSmile: boolean; }'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(453,46): error TS7006: Parameter 'e' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(458,13): error TS2322: Type '{ turnLeft?: undefined; turnRight?: undefined; lookStraight?: undefined; chinUp?: undefined; chinDown?: undefined; smile?: undefined; noSmile?: undefined; } | { turnLeft: boolean; turnRight: boolean; ... 4 more ...; noSmile: boolean; }' is not assignable to type '{ turnLeft: boolean; turnRight: boolean; chinUp: boolean; chinDown: boolean; lookStraight: boolean; smile: boolean; noSmile: boolean; } | { turnLeft: boolean; turnRight: boolean; chinUp: boolean; chinDown: boolean; lookStraight: boolean; smile: boolean; noSmile: boolean; }'.
+  Type '{ turnLeft?: undefined; turnRight?: undefined; lookStraight?: undefined; chinUp?: undefined; chinDown?: undefined; smile?: undefined; noSmile?: undefined; }' is not assignable to type '{ turnLeft: boolean; turnRight: boolean; chinUp: boolean; chinDown: boolean; lookStraight: boolean; smile: boolean; noSmile: boolean; } | { turnLeft: boolean; turnRight: boolean; chinUp: boolean; chinDown: boolean; lookStraight: boolean; smile: boolean; noSmile: boolean; }'.
+    Type '{ turnLeft?: undefined; turnRight?: undefined; lookStraight?: undefined; chinUp?: undefined; chinDown?: undefined; smile?: undefined; noSmile?: undefined; }' is not assignable to type '{ turnLeft: boolean; turnRight: boolean; chinUp: boolean; chinDown: boolean; lookStraight: boolean; smile: boolean; noSmile: boolean; }'.
+      Types of property 'turnLeft' are incompatible.
+        Type 'undefined' is not assignable to type 'boolean'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(471,36): error TS7005: Variable 'holdStart' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(472,53): error TS7005: Variable 'holdStart' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(480,18): error TS7006: Parameter 'face' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(480,24): error TS7006: Parameter 'valid' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(484,12): error TS2339: Property 'width' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(484,26): error TS2339: Property 'videoWidth' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(485,12): error TS2339: Property 'height' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(485,27): error TS2339: Property 'videoHeight' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(486,24): error TS2339: Property 'getContext' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(487,32): error TS2339: Property 'width' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(487,46): error TS2339: Property 'height' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(507,32): error TS2339: Property 'getContext' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(508,40): error TS2339: Property 'width' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(508,62): error TS2339: Property 'height' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(524,9): error TS7005: Variable 'holdTimer' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(540,30): error TS7005: Variable 'humanInstance' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(555,13): error TS18047: 'tctx' is possibly 'null'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(555,28): error TS2769: No overload matches this call.
+  Overload 1 of 6, '(image: CanvasImageSource, sx: number, sy: number, sw: number, sh: number, dx: number, dy: number, dw: number, dh: number): void', gave the following error.
+    Argument of type 'null' is not assignable to parameter of type 'CanvasImageSource'.
+  Overload 2 of 6, '(image: CanvasImageSource, sx: number, sy: number, sw: number, sh: number, dx: number, dy: number, dw: number, dh: number): void', gave the following error.
+    Argument of type 'null' is not assignable to parameter of type 'CanvasImageSource'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(557,13): error TS18047: 'tctx' is possibly 'null'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(557,28): error TS2769: No overload matches this call.
+  Overload 1 of 6, '(image: CanvasImageSource, dx: number, dy: number, dw: number, dh: number): void', gave the following error.
+    Argument of type 'null' is not assignable to parameter of type 'CanvasImageSource'.
+  Overload 2 of 6, '(image: CanvasImageSource, dx: number, dy: number, dw: number, dh: number): void', gave the following error.
+    Argument of type 'null' is not assignable to parameter of type 'CanvasImageSource'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(559,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(561,31): error TS2345: Argument of type '{ embedding: unknown[]; score: any; sample_type: string | undefined; yaw: number; pitch: number; }' is not assignable to parameter of type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(577,53): error TS18046: 'e' is of type 'unknown'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(591,42): error TS2339: Property 'srcObject' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(597,55): error TS18046: 'e' is of type 'unknown'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(602,9): error TS7005: Variable 'detectInterval' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(605,16): error TS2339: Property 'srcObject' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(606,15): error TS2339: Property 'srcObject' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(606,45): error TS7006: Parameter 't' implicitly has an 'any' type.
+app/pages/dashboard/pegawai/[id]/enroll.vue(607,15): error TS2339: Property 'srcObject' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(618,65): error TS2339: Property 'embedding' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(620,44): error TS2339: Property 'sample_type' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(620,67): error TS2339: Property 'score' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(620,92): error TS2339: Property 'yaw' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(620,104): error TS2339: Property 'pitch' does not exist on type 'never'.
+app/pages/dashboard/pegawai/[id]/enroll.vue(629,48): error TS18046: 'e' is of type 'unknown'.
+app/pages/dashboard/pegawai/index.vue(349,9): error TS2322: Type 'SortingState' is not assignable to type 'never[]'.
+  Type 'ColumnSort' is not assignable to type 'never'.
+app/pages/dashboard/profil.vue(34,112): error TS18047: '__VLS_ctx.user' is possibly 'null'.
+app/pages/dashboard/profil.vue(34,117): error TS2339: Property 'displayName' does not exist on type 'AuthUser'.
+app/pages/dashboard/profil.vue(36,108): error TS18047: '__VLS_ctx.user' is possibly 'null'.
+app/pages/dashboard/profil.vue(36,113): error TS2339: Property 'accountRoleLabel' does not exist on type 'AuthUser'.
+app/pages/dashboard/profil.vue(86,58): error TS2339: Property 'displayName' does not exist on type '{ fullName: string; email: string; phoneNumber: string; accountRoleLabel: string; }'.
+app/pages/dashboard/profil.vue(220,29): error TS2532: Object is possibly 'undefined'.
+app/pages/dashboard/profil.vue(220,29): error TS2532: Object is possibly 'undefined'.
+app/pages/dashboard/profil.vue(220,39): error TS2532: Object is possibly 'undefined'.
+app/pages/dashboard/profil.vue(220,39): error TS2532: Object is possibly 'undefined'.
+app/pages/dashboard/profil.vue(220,64): error TS2532: Object is possibly 'undefined'.
+app/pages/register.vue(332,24): error TS18048: 'base64Url' is possibly 'undefined'.
+app/pages/superadmin/instansi-detail.vue(407,9): error TS2322: Type 'SortingState' is not assignable to type 'never[]'.
+  Type 'ColumnSort' is not assignable to type 'never'.
+app/pages/superadmin/instansi.vue(28,47): error TS2339: Property 'icon' does not exist on type '{ label: string; value: number; bgClass: string; } | { label: string; value: string; bgClass: string; }'.
+  Property 'icon' does not exist on type '{ label: string; value: number; bgClass: string; }'.
+app/pages/superadmin/instansi.vue(257,141): error TS2339: Property 'category' does not exist on type 'TenantSummary'.
+app/pages/superadmin/instansi.vue(295,9): error TS2322: Type 'SortingState' is not assignable to type 'never[]'.
+  Type 'ColumnSort' is not assignable to type 'never'.
+app/pages/superadmin/transaksi.vue(16,71): error TS2322: Type 'string' is not assignable to type '"pending" | "approved" | "rejected" | "all"'.
+app/pages/superadmin/transaksi.vue(60,73): error TS2339: Property 'cellClass' does not exist on type 'ColumnMeta<{ id: number; institutionId: number; tenantName: string; categoryLabel: string; plan: PlanTier; amount: number; amountDisplay: string; uploadedAtDisplay: string; transactionId: string | null; ... 4 more ...; tenantInitials: string; }, unknown>'.
+app/pages/superadmin/transaksi.vue(364,9): error TS2322: Type 'SortingState' is not assignable to type 'never[]'.
+  Type 'ColumnSort' is not assignable to type 'never'.
+
+[41m[30m ERROR [39m[49m Process exited with non-zero status (2)
+
+    [90mat [39mL._waitForOutput ([36m/C:/Projects/presenly-app/frontend/node_modules/tinyexec/dist/main.mjs:582:92[39m)
+    [90mat [39mprocess.processTicksAndRejections ([36mnode:internal/process/task_queues:105:5[39m)
+    [90mat [39masync Object.run ([36m/C:/Projects/presenly-app/frontend/node_modules/@nuxt/cli/dist/typecheck-DzNAMeid.mjs:66:3[39m)
+    [90mat [39masync runCommand ([36m/C:/Projects/presenly-app/frontend/node_modules/citty/dist/index.mjs:228:47[39m)
+    [90mat [39masync runCommand ([36m/C:/Projects/presenly-app/frontend/node_modules/citty/dist/index.mjs:217:5[39m)
+    [90mat [39masync runMain ([36m/C:/Projects/presenly-app/frontend/node_modules/citty/dist/index.mjs:394:10[39m) 
+
+

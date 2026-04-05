@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Saat mode LIGHT (default) */
+  :root {
+    --bg-base: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --text-main: #0F172A;
+  }
+
+  /* Saat mode DARK aktif */
+  .dark {
+    --bg-base: #0A0F1E;
+    --bg-card: #111827;
+    --text-main: #F9FAFB;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-main);
+  }
+}
