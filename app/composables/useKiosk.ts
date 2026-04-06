@@ -13,6 +13,7 @@ export const useKiosk = () => {
       name: string;
       confidence: number;
       subtitle?: string;
+      photoUrl?: string;
     }>("/kiosk/identify", {
       method: "POST",
       body: { embedding },

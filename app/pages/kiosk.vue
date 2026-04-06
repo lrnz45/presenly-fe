@@ -67,9 +67,10 @@
                                     {{ c.scanType === 'OUT' ? 'Pulang' : 'Masuk' }}
                                 </span>
                             </div>
-                            <span v-if="c.punctualityLabel" class="log-badge" :class="c.punctualityLabel === 'Terlambat' ? 'late' : 'ok'">{{
-                                c.punctualityLabel
-                            }}</span>
+                            <span v-if="c.punctualityLabel" class="log-badge"
+                                :class="c.punctualityLabel === 'Terlambat' ? 'late' : 'ok'">{{
+                                    c.punctualityLabel
+                                }}</span>
                         </div>
                     </div>
                 </div>
@@ -401,8 +402,56 @@ const lastDetected = ref<KioskCheckInLogEntry | null>(null)
 const attendanceStatus = ref('Tepat Waktu')
 const isPinVerified = ref(false)
 
-const { logout } = useAuth()
+const { logout, token } = useAuth()
 const { getDailyRecords } = useAttendance()
+const { getInstitution } = useInstitution()
+
+const institutionConfig = ref<any>(null)
+
+async function fetchInstitutionConfig() {
+    try {
+        institutionConfig.value = await getInstitution()
+    } catch (e) {
+        console.warn("Failed to fetch institution config:", e)
+    }
+}
+
+// ─── Helper: hitung terlambat dari jam check-in ───
+function isLateFromTime(checkInDisplay: string | undefined): boolean {
+    if (!checkInDisplay || checkInDisplay === '--:--') return false
+    
+    // Default 08:00 jika config gagal
+    let targetHour: number = 8
+    let targetMinute: number = 0
+    let tolerance: number = 0
+
+    const config = institutionConfig.value
+    if (config) {
+        const ci = config.check_in_time
+        if (typeof ci === 'string') {
+            const parts = ci.split(':').map(Number)
+            if (parts.length >= 2 && typeof parts[0] === 'number' && typeof parts[1] === 'number') {
+                targetHour = parts[0]
+                targetMinute = parts[1]
+            }
+        }
+        const lt = Number(config.late_tolerance_minutes)
+        if (!isNaN(lt)) tolerance = lt
+    }
+
+    const separator = checkInDisplay.includes('.') ? '.' : ':'
+    const displayParts = checkInDisplay.split(separator).map(Number)
+    if (displayParts.length < 2) return false
+    
+    const h = displayParts[0]
+    const m = displayParts[1]
+    if (typeof h !== 'number' || typeof m !== 'number' || isNaN(h) || isNaN(m)) return false
+    
+    const configInMinutes = (targetHour * 60) + targetMinute + tolerance
+    const actualInMinutes = (h * 60) + m
+    
+    return actualInMinutes > configInMinutes
+}
 
 // Theme
 const isDarkMode = ref(false)
@@ -456,17 +505,28 @@ async function loadStats() {
 
 async function fetchTodayLogs() {
     try {
-        const logs = await getDailyRecords(); // Dari useAttendance()
+        const logs = await getDailyRecords()
+        console.table(logs.map(l => ({
+            name: l.staffName,
+            status: l.status,
+            checkIn: l.checkInDisplay,
+            checkOut: l.checkOutDisplay
+        })))
+        
         checkIns.value = logs.map(l => {
             const st = (l as any).scanType || (l.checkOutDisplay ? 'OUT' : 'IN');
+            
+            // Hitung terlambat secara manual jika scan IN
+            const isLate = st === 'IN' && (l.status === 'T' || isLateFromTime(l.checkInDisplay));
+            
             return {
-                id: l.id,
+                id: String(l.id),
                 name: l.staffName,
-                subtitle: (l as any).subtitle || 'Staff',
-                initials: l.staffName.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2),
+                subtitle: (l as any).subtitle || (l as any).department || 'Staff',
+                initials: l.staffName.split(' ').map((n: string) => n[0]).join('').toUpperCase().slice(0, 2),
                 timeDisplay: l.checkInDisplay || '--:--',
                 scanType: st,
-                punctualityLabel: st === 'OUT' ? '' : (l.status === 'T' ? 'Terlambat' : 'Tepat Waktu'),
+                punctualityLabel: st === 'OUT' ? '' : (isLate ? 'Terlambat' : 'Tepat Waktu'),
                 confidence: 100,
                 photoUrl: (l as any).photoUrl
             } as KioskCheckInLogEntry;
@@ -550,6 +610,7 @@ async function triggerAutoScan(currentEmbedding: number[]) {
                 ...entry,
                 name: result.name,
                 subtitle: result.subtitle || 'Staff',
+                photoUrl: result.photoUrl,
                 confidence: result.confidence,
                 initials: result.name.split(' ').map((n: string) => n[0]).join('').toUpperCase().slice(0, 2)
             };
@@ -715,12 +776,13 @@ function simulateScan(type: 'success' | 'fail') {
 }
 
 // Lifecycle
-onMounted(() => {
+onMounted(async () => {
     updateClock()
     clockInterval = setInterval(updateClock, 1000)
-    startCamera()
-    loadStats()
-    fetchTodayLogs()
+    await fetchInstitutionConfig()
+    await loadStats()
+    await fetchTodayLogs()
+    await startCamera()
 })
 
 onBeforeUnmount(() => {
